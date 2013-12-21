@@ -1,1 +1,9 @@
-Deny from all
+<IfModule mod_rewrite.c>
+    RewriteEngine On 
+    RewriteCond %{REQUEST_FILENAME} !-f 
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteRule ^(.*)$ /tarea4ayudantia/index.php/$1 [L] 
+</IfModule>
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /tarea4ayudantia/index.php 
+</IfModule>
