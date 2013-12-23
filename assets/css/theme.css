@@ -34,6 +34,17 @@ h3{
 
 h4{
 	color: #7F5959;
+	text-align: center;
+}
+
+h5{
+	color: #DDDDDD;
+	text-align: center;
+}
+
+h6{
+	color: #CCCCCC;
+	text-align: center;
 }
 
 table{
@@ -68,11 +79,18 @@ td{
 	text-align: center;
 }
 
-h6{
-	color: #CCCCCC;
-	text-align: center;
+label{
+	font-size: 13px;
 }
 
+input{
+	font-size: 13px;
+}
+
+p{
+	font-size: 10px;
+	text-align: center;
+}
 .form_buscar{
 	width: 500px;
 	text-align: center;
@@ -88,7 +106,7 @@ h6{
 .input{
 	margin-left: 10px;
 	margin-right: 10px;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .submit{
@@ -96,10 +114,22 @@ h6{
 	padding-right: 15px;
 	border-radius: 10px;
 	background: #767676;
-	color: #FFB2B2;
+	color: #DDDDDD;
 	outline: none;
 	border: 1px solid #767676;
 	margin: none;
+}
+
+.submit2{
+	display: block;
+	border-radius: 10px;
+	background: #767676;
+	color: #DDDDDD;
+	margin-right: auto;
+	margin-left: auto;
+	width: 75px;
+	outline: none;
+	border: 1px solid #767676;
 }
 
 .center{
@@ -113,10 +143,15 @@ h6{
 }
 
 #boton{
+	display: block;
 	border: 1px solid #FFB2B2;
 	background: #7F5959;
 	color: #DDDDDD;
 	padding: 7px;
+	text-align: center;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius: 10px;
 	text-decoration: none;
 }
@@ -130,14 +165,14 @@ h6{
 .form{
 	padding: 0;
 	border: 1px solid #767676;
-	width: 300px;
+	width: 350px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #titulo{
 	background: #767676;
-	padding: 10px;
+	padding: 1px;
 }
 
 #contenido{

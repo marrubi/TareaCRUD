@@ -43,18 +43,18 @@
 								echo "<td>".$row3['nombre']."</td>";
 							}
 						}
-						echo "<td><a href='crud_controller/editar/".$row['id_res']."'>Editar</a></td>";
-						echo "<td><a href='crud_controller/eliminar/".$row['id_res']."'>Eliminar</a></td>";
+						echo "<td><a href='".base_url()."crud_controller/editar/".$row['id_res']."'>Editar</a></td>";
+						echo "<td><a href='".base_url()."crud_controller/eliminar/".$row['id_res']."'>Eliminar</a></td>";
 					echo "</tr>";
 				}
 			echo "</table>";
 		}
 		else{
-			echo "<h3 class='center'>No hay datos en ésta tabla</h3>";
+			echo "<h3 class='center'>No hay reservas realizadas</h3>";
 		}
 	?>
 	<br/>
 	<br/>
-	<a id="boton" href="crud_controller/agregar">Agregar Nueva Reserva</a>
+	<a id="boton" href=" <?= base_url() ?>crud_controller/agregar">Agregar Nueva Reserva</a>
 	<br/>
 </section>
