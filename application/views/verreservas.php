@@ -7,7 +7,7 @@
 		$input = array('name'=>'reserva','class'=>'input');
 		$submit = array('name'=>'submit', 'class'=>'submit','value'=>'Buscar');
 		echo form_open('crud_controller/buscar', $var);
-			echo form_label('Ingresar una reserva:','reserva', $label);
+			echo form_label('Búsqueda por rut académico:','reserva', $label);
 			echo form_input($input);
 			echo form_error();
 			echo form_submit($submit);
