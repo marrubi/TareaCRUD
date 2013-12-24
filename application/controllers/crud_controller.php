@@ -80,20 +80,21 @@ class Crud_controller extends CI_Controller{
 	public function editar($id){
 		$id_profesor = $this->crud_model->getIDProfesor($id);
 		$datos = $this->crud_model->getReserva($id);
-		
+	
+
 		$array = array(
-			'id' => $datos['id'],
+			'id' => $datos['id_res'],
 			'rut_edit' => $this->crud_model->getRut($id_profesor),
-			'laboratorio_edit' => $datos['laboratorio'],
-			'periodo_edit' => $datos['periodo'],
-			'fecha_edit' => $datos['fecha'],
-			'asignatura_edit' => $datos['asignatura'],
+			'laboratorio_edit' => $datos['lab_fk'],
+			'periodo_edit' => $datos['periodo_fk'],
+			'fecha_edit' => $datos['fecha_dest'],
+			'asignatura_edit' => $datos['asignatura_fk'],
 
 		);
-
 		$this->load->view('header');
 		$this->load->view('edreserva',$array);
 		$this->load->view('footer');
+		
 	}
 	//Validador de la edición
 	public function validar_editar(){
@@ -197,7 +198,7 @@ class Crud_controller extends CI_Controller{
 	
 		if($id){
 			$arreglo = array(
-				'reservas' => $this->crud_model->getReserva($id),
+				'reservas' => $this->crud_model->getAcademicoReserva($id),
 				'academicos' => $this->crud_model->getDatosAcademicos(),
 				'asignaturas' => $this->crud_model->getAsignaturas()
 			);

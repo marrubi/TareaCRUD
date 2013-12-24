@@ -13,6 +13,7 @@
 				'value' => 'Editar'
 			);
 			echo form_hidden('id',$id);
+			echo "ID:".$id; 
 			echo form_label('Rut');
 			echo "<br/>";
 			echo form_input('rut', $rut_edit);
@@ -67,8 +68,6 @@
 				'4'=> 'Laboratorio 4',
 				'5'=> 'Laboratorio 5',
 				'6'=> 'Laboratorio 6',
-				'7'=> 'Laboratorio 7',
-				'8'=> 'Laboratorio 8',
 			);
 			echo form_dropdown('laboratorio',$labs, $laboratorio_edit);
 			echo "<br/>";

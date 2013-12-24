@@ -22,6 +22,31 @@ class Crud_model extends CI_Model{
 	public function getReserva($id){
 		$this->db->select('*');
 		$this->db->from('tb-reserva');
+		$this->db->where('id_res',$id);
+
+		$query = $this->db->get();
+		
+		if($query->num_rows() > 0){
+			$row = $query->row();
+			$array = array(
+				'id_res' => $row->id_res,
+				'academico_fk' => $row->academico_fk,
+				'periodo_fk' => $row->periodo_fk,
+				'asignatura_fk' => $row->asignatura_fk,
+				'fecha_dest' => $row->fecha_dest,
+				'lab_fk' => $row->lab_fk,
+			);
+
+			return $array;
+		}
+		else{
+			return false;
+		}
+	}
+
+	public function getAcademicoReserva($id){
+		$this->db->select('*');
+		$this->db->from('tb-reserva');
 		$this->db->where('academico_fk',$id);
 
 		$query = $this->db->get();

@@ -66,8 +66,6 @@
 				'4'=> 'Laboratorio 4',
 				'5'=> 'Laboratorio 5',
 				'6'=> 'Laboratorio 6',
-				'7'=> 'Laboratorio 7',
-				'8'=> 'Laboratorio 8',
 			);
 			echo form_dropdown('laboratorio',$labs, $laboratorio_add);
 			echo "<br/>";
